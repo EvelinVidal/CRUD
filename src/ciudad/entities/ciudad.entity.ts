@@ -7,10 +7,11 @@ export class Ciudad {
 
   @Column()
   nombre: string;
-
+// constructor 
   constructor(nombre: string) {
     this.nombre = nombre;
   }
+  // getters y setters -> p.ej. los usamos en el servicio para create, obtenemos el nombre. No es mala práctica ponerlos
   public getId(): number {
     return this.id;
   }
@@ -22,3 +23,4 @@ export class Ciudad {
   }
 }
 //la tabla se debe importar en el modulo de la entidad. ciudad.module.ts
+// para armar las tablas con estos getters y setters basta pero si hay cosas más complejas se puede usar protectec, private..
