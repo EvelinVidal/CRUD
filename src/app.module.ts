@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CiudadModule } from './ciudad/ciudad.module';
+import { ClaseModule } from './clase/clase.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { CiudadModule } from './ciudad/ciudad.module';
       "database":"colegio",
       "entities":["dist/**/**.entity{.ts,.js}"],
       "synchronize":true}),
-    CiudadModule, // importo modulo ciudad
+    CiudadModule,
+    ClaseModule, // importo modulo ciudad
   ],
   controllers: [AppController],
   providers: [AppService],
