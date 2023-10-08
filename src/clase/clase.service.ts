@@ -11,7 +11,7 @@ export class ClaseService {
   constructor(
     @InjectRepository(Clase) 
     private claseRepository:Repository<Clase> 
-    ){}
+    ){} 
 
   async create(claseDto: Clase):Promise<boolean> {
     let clase : Clase = await this.claseRepository.save(new Clase(claseDto.nombre))
